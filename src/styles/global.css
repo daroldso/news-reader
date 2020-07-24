@@ -1,0 +1,14 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 0 10rem;
+  /*font-family: 'Titillium Web', sans-serif;*/
+}
+
+.wrapper {
+  /*padding-top: 80px;*/
+}

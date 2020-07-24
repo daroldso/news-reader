@@ -1,0 +1,18 @@
+:root {
+  --header-bg-color: #3c3b63;
+  --header-text-color: #fff;
+  --header-shadow-color: rgba(0, 0, 0, 0.2);
+
+  --search-field-bg-color: rgba(255, 255, 255, 0.15);
+  --search-field-icon-color: #fff;
+  --search-field-placeholder-color: rgba(255, 255, 255, 0.42);
+  --search-field-text-color: #fff;
+
+  --card-avatar-bg-color: #bdbdbd;
+  --card-avatar-text-color: #fafafa;
+  --card-header-title-text-color: rgba(0, 0, 0, 0.87);
+  --card-header-subtitle-text-color: rgba(0, 0, 0, 0.54);
+  --card-title-text-color: rgba(0, 0, 0, 0.87);
+  --card-content-text-color: rgba(0, 0, 0, 0.54);
+  --card-shadow-color: rgba(0, 0, 0, 0.2);
+}

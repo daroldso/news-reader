@@ -1,0 +1,28 @@
+.container {
+  box-shadow: 0 1px 3px 2px var(--card-shadow-color);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--card-avatar-bg-color);
+  color: var(--card-avatar-text-color);
+
+  border-radius: 50%;
+}
+
+.headerTitle {
+  color: var(--card-header-title-text-color);
+}
+
+.headerSubtitle {
+  color: var(--card-header-subtitle-text-color);
+}
+
+.title {
+  color: var(--card-title-text-color);
+}
+
+.content {
+  color: var(--card-content-text-color);
+}
