@@ -3,19 +3,23 @@ import api from '../services/api'
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES'
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES'
 
-function requestArticles(subreddit) {
+export function requestArticles(params) {
   return {
-    type: REQUEST_ARTICLES
+    type: REQUEST_ARTICLES,
+    payload: {
+      ...params
+    }
   }
 }
 
-function receiveArticles(newArticles, articles) {
+export function receiveArticles(articles) {
   return {
     type: RECEIVE_ARTICLES,
-    articles: articles.concat(newArticles)
+    articles
   }
 }
 
+// For redux thunk
 export function fetchArticles(params) {
   return (dispatch, getState) => {
     const { articles } = getState()

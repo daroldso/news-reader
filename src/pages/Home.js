@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import dayjs from 'dayjs'
 
-import { fetchArticles } from '../redux/actions'
+import { requestArticles } from '../redux/actions'
 import { debounce, isScrolledToBottom } from '../services/utils'
 
 import { Card } from '../components'
@@ -15,7 +15,7 @@ const offset = 700
 
 const Home = (props) => {
   const [page, setPage] = useState(1)
-  const { searchKeyword, articles, isFetching, dispatch } = props
+  const { searchKeyword, articles, isFetching, dispatch, fetchArticles } = props
 
   useEffect(() => {
     fetchNewPosts()
@@ -42,7 +42,7 @@ const Home = (props) => {
     }
 
     try {
-      dispatch(fetchArticles({ domains, page, pageSize }))
+      fetchArticles({ domains, page, pageSize })
       setPage(page + 1)
     } catch (err) {
       console.log('Error: ', err)
@@ -92,4 +92,8 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => state
 
-export default connect(mapStateToProps)(Home)
+const mapDispatchToProps = (dispatch) => ({
+  fetchArticles: ({ domains, page, pageSize }) => dispatch(requestArticles({ domains, page, pageSize }))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -17,7 +17,7 @@ function articles(
       return {
         ...state,
         isFetching: false,
-        articles: action.articles
+        articles: state.articles.concat(action.articles)
       }
     default:
       return state
